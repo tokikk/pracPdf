@@ -51,12 +51,11 @@ class PageFragment : Fragment() {
 
         viewpager2.adapter = PagerAdapter(images)
         viewpager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-        viewpager2.adapter.cou
     }
 
     companion object {
         @JvmStatic
-        fun newInstance(path: String, param2: String) =
+        fun newInstance(path: String) =
             PageFragment().apply {
                 arguments = Bundle().apply {
                     putString("PATH", path)
