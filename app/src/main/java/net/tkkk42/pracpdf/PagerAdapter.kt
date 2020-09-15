@@ -24,6 +24,10 @@ class PagerAdapter(private val items: List<Bitmap>) :RecyclerView.Adapter<PagerA
         holder.bind(items[position])
     }
 
+    fun getItem(position: Int) {
+
+    }
+
     override fun getItemCount(): Int = items.size
 
 }

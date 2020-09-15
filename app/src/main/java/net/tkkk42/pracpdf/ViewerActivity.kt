@@ -16,7 +16,7 @@ class ViewerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_viewer)
 
         val bundle = Bundle()
-        bundle.putString("PATH", "/sdcard/Download/NMQ8311-01付属書2-P.pdf")
+        bundle.putString("PATH", "/sdcard/Download/平成25年度　後期履修登録の変更、成績照会、後期ガイダンス日程.pdf")
 
         val fragment = PageFragment()
         fragment.arguments = bundle

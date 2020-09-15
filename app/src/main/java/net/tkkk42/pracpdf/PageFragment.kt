@@ -55,8 +55,12 @@ class PageFragment : Fragment() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
 
+                //get recyclerview??
+                viewpager2.getChildAt(position)
                 val adapter = viewpager2.adapter
-                if (adapter != null) { cur_page.text = "${position+1}/${adapter.itemCount}" }
+                if (adapter != null) {
+                    cur_page.text = "${position+1}/${adapter.itemCount}" }
+
             }
         })
     }

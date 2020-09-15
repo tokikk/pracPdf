@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".ImageFragment">
 
-    <ImageView
+    <net.tkkk42.pracpdf.tkImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="?attr/listChoiceBackgroundIndicator" />
+        android:src="@drawable/ic_baseline_error_24" />
 </FrameLayout>
