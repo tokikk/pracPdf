@@ -51,6 +51,14 @@ class PageFragment : Fragment() {
 
         viewpager2.adapter = PagerAdapter(images)
         viewpager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        viewpager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+
+                val adapter = viewpager2.adapter
+                if (adapter != null) { cur_page.text = "${position+1}/${adapter.itemCount}" }
+            }
+        })
     }
 
     companion object {
