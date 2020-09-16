@@ -12,8 +12,9 @@ class PagerAdapter(private val items: List<Bitmap>) :RecyclerView.Adapter<PagerA
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val image = view.findViewById<ImageView>(R.id.image)
 
-        fun bind(img: Bitmap) {
+        fun bind(img: Bitmap, position: Int) {
             image.setImageBitmap(img)
+            image.setTag("img_${position.toString()}")
         }
     }
 
@@ -21,7 +22,8 @@ class PagerAdapter(private val items: List<Bitmap>) :RecyclerView.Adapter<PagerA
         ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.fragment_image, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(items[position])
+        holder.bind(items[position], position)
+
     }
 
     fun getItem(position: Int) {
